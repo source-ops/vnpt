@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VNPT Thành phố Hồ Chí Minh - Tuyển dụng</title>
+<style>
+html,body{margin:0;padding:0;background:#eef1f5}
+body{display:flex;justify-content:center;min-height:100vh}
+.poster{position:relative;width:min(100vw,1191px);line-height:0}
+.poster img{display:block;width:100%;height:auto}
+.hit{position:absolute;z-index:2;display:block;background:transparent}
+.hit.debug{background:#ff000033;outline:2px dashed red}
+.phone{left:52%;top:87.1%;width:43%;height:3.5%}
+.apply{left:51%;top:91.1%;width:45%;height:4.5%}
+.map{left:64%;top:67.0%;width:34%;height:11.5%}
+.contact{left:51%;top:82.0%;width:47%;height:15%}
+@media(max-width:600px){
+ body{background:#fff}.poster{width:100%}
+}
+</style>
+</head>
+<body>
+<main class="poster" id="poster">
+<img src="poster.png" alt="Poster tuyển dụng VNPT Thành phố Hồ Chí Minh">
+<a class="hit phone" href="tel:0919425345" aria-label="Gọi 0919 425 345"></a>
+<a class="hit map" href="https://www.google.com/maps/search/?api=1&query=174A%20T%E1%BB%89nh%20l%E1%BB%99%208%2C%20T%C3%A2n%20An%20H%E1%BB%99i%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener" aria-label="Mở địa chỉ trên Google Maps"></a>
+<a class="hit apply" href="#" id="apply" aria-label="Ứng tuyển online"></a>
+</main>
+<script>
+const APPLICATION_URL="";
+const a=document.getElementById("apply");
+if(APPLICATION_URL){a.href=APPLICATION_URL;a.target="_blank";a.rel="noopener"}
+else a.onclick=e=>{e.preventDefault();alert("Chưa gắn link hệ thống Tuyển dụng chính thức VNPT.");};
+if(new URLSearchParams(location.search).get("debug")==="1")
+document.querySelectorAll(".hit").forEach(x=>x.classList.add("debug"));
+</script>
+</body>
+</html>
