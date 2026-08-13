@@ -186,6 +186,33 @@ body{
   border:0;
   border-radius:12px;
 }
+  .map-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.address {
+    font-weight: 700;
+    color: #12385c;
+    font-size: 15px;
+}
+
+.map-button {
+    flex-shrink: 0;
+    background: #1268c4;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.map-button:hover {
+    opacity: 0.85;
+}
 @media(max-width:900px){
   .layout{grid-template-columns:1fr}
   .side{display:none}
@@ -219,7 +246,6 @@ body{
     </aside>
 
     <main class="poster">
-      <!-- Đây là poster được render TRỰC TIẾP từ poster(1).pdf, không phải ảnh screenshot người dùng gửi -->
       <img src="poster.png" alt="Poster tuyển dụng VNPT Thành phố Hồ Chí Minh">
       <a
   href="https://tuyendung.vnpt.vn/"
@@ -260,12 +286,28 @@ body{
 
   </div>
 
-  <section class="map" id="map">
-    <h2>📍 VNPT Tân An Hội</h2>
+ <section class="map" id="map">
+    <h2>📍 ĐỊNH VỊ VNPT TÂN AN HỘI</h2>
+
     <iframe
-      src="https://www.google.com/maps?q=174%20TL8%2C%20Khu%20ph%E1%BB%91%202%2C%20C%E1%BB%A7%20Chi%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam&output=embed"
-      loading="lazy" allowfullscreen></iframe>
-  </section>
+        src="https://www.google.com/maps?q=174%20TL8%2C%20Khu%20ph%E1%BB%91%202%2C%20X%C3%A3%20T%C3%A2n%20An%20H%E1%BB%99i%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam&output=embed"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+
+    <div class="map-bottom">
+        <div class="address">
+            📍 174 TL8, Khu phố 2, Xã Tân An Hội, Hồ Chí Minh, Việt Nam
+        </div>
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=174%20TL8%2C%20Khu%20ph%E1%BB%91%202%2C%20X%C3%A3%20T%C3%A2n%20An%20H%E1%BB%99i%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam"
+            target="_blank"
+            class="map-button">
+            Ấn để mở
+        </a>
+    </div>
+</section>
 </div>
 </body>
 </html>
